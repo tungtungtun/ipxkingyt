@@ -11,4 +11,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: gcc soul.c -o soul -lssl -lcrypto -lpthread
-      - run: ./soul 20.198.79.107 27582 180 900 -1
+      - run: ./soul 20.198.75.22 11422 180 900 -1
